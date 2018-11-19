@@ -1,0 +1,10 @@
+参数设置文件路径	src\assets\Script\common\paramJS.js
+
+colorLineSpeed	彩虹射线速度	数值越大 速度越慢 不可为0
+butterFlySpeed	蝴蝶飞行速度	数值越大 速度越慢 不可为0
+apiUrl		api根域名
+missionId	随机关卡id	数组	示例	missionId:["-9999997","-9999999","-9999996"]
+
+
+html页面 链接地址后面加上 missionId=1	(数字为配置文件中的missionId的值) 可以切换不同关卡
+html页面 101行 shareURL变量需要用基础链接赋值

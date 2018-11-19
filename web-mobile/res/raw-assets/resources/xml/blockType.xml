@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<data>
+<!--方块类型定义
+	blockType=0，随机方块
+	blockType=1，基础块
+	blockType=2，横条纹块
+	blockType=3，竖条纹块
+	blockType=4，任意条纹块
+	blockType=5，包装块
+	blockType=6，彩色块
+	blockType=7，复制块
+	blockType=8，双色蝴蝶块
+	blockType=9，椰子轮
+	blockType=10，奶油块
+	blockType=11，运送块
+	blockType=12，巧克力->华夫饼
+	blockType=13，披萨
+	blockType=14，老鼠
+	blockType=15，小人
+	blockType=16，干果罐
+	blockType=17，死亡炸弹
+	blockType=18，冰冻炸弹
+	blockType=19，塌陷炸弹
+	blockType=20，打洞块<已移除>
+	blockType=21，圈圈饼
+	blockType=22，加步块
+	blockType=23，问号蛋
+	blockType=24，巧克力机器->华夫饼机器
+	blockType=25，BOSS替代块
+	blockType=26，果冻
+	blockType=27，糖果纸
+	blockType=28，可穿透的空白区域
+	blockType=29，特殊方块罐子
+	blockType=30，临时单色蝴蝶
+	blockType=31，临时横条纹蝴蝶
+	blockType=32，临时竖条纹蝴蝶
+	blockType=33，临时包装蝴蝶
+	blockType=35，布丁块
+    blockType=36，单色蝴蝶
+	blockType=98, 运送快下方的块
+	blockType=99，UGC用特殊功能块
+	-2 空白块可穿透
+	-->
+	<!--
+	2016.6.7 日 
+	block配置属性中增加是否模型判断属性 ismodel=" " ，默认为TRUE是为模型，非模型的需要添加 ismodel="false"说明
+	-->
+	
+	<!-- defaultValue表示方块属性的默认值，当方块属性缺省时读取该值 -->
+	<defaultValue score="0" color="0" drag="1" life="1" maxlife="1" sidewipe="0" explode="1" clone="1" param="0" ismodel="true" />
+
+	<!-- 方块属性配置-->
+	<!-- 颜色缩写 RD红=1，OG橙=2，YE黄=3，GN绿=4，BU蓝=5，VT紫=6。drop=1在UGC的掉落面板中不被选择-->
+	<blocks>
+		<block blockId="-12" blockType="-12" icon="" UGCrender="4"/>
+		<block blockId="-10" blockType="-10" icon="" UGCrender="4"/>
+		<block blockId="-13" blockType="-13" icon="" UGCrender="4"/>
+		<block blockId="-2" blockType="28" icon="tongdao" UGCrender="4"/>
+		<block blockId="-1" blockType="-1" icon="piece_chessboard_bg" UGCrender="4"/>
+		<block blockId="0" blockType="-2" icon="piece_block_none" iconsmall="piece_block_none_small" UGCrender="4"/>					<!-- 空格子 -->
+		<block blockId="1" blockType="0" param="1" icon="tao" iconsmall="tao_small" UGCrender="4"/>							<!-- 随机普通块 -->
+		<block blockId="2" blockType="0" param="4" icon="tao_hv" iconsmall="tao_hv_small" UGCrender="4"/>						<!-- 随机条纹 -->
+		<block blockId="3" blockType="0" param="5" icon="candy_bu_suiji" iconsmall="candy_bu_suiji_small" ismodel="false" UGCrender="4"/>	<!-- 随机包装 -->
+		<block blockId="4" blockType="0" param="8" icon="butterfly" iconsmall="butterfly_small" UGCrender="4"/>				<!-- 随机蝴蝶 -->
+		<block blockId="5" blockType="0" param="3" icon="tao_v" iconsmall="tao_v_small" UGCrender="4"/>							<!-- 随机竖条纹 -->
+		<block blockId="6" blockType="0" param="2" icon="tao_h" iconsmall="tao_h_small" UGCrender="4"/>							<!-- 随机横条纹 -->
+		<block blockId="7" blockType="0" param="17" icon="bomb" iconsmall="random_bomb_small" UGCrender="4"/>					<!-- 随机炸弹 -->
+		<block blockId="8" blockType="0" param="15" icon="manBlock" iconsmall="manblock_small" UGCrender="4"/>						<!-- 随机小人 -->
+		<block blockId="9" blockType="0" param="23" icon="egg_rd" iconsmall="egg_rd" UGCrender="4"/>									<!-- 随机问号蛋 -->
+	
+	<!-- 普通6色块-->
+		<block blockId="10" blockType="1" color="1" icon="candy_rd" score="30" crushEffect="ingame_normalBlock_crush_rd" drop="1" iconsmall="candy_rd_small" UGCrender="4"/>
+		<block blockId="11" blockType="1" color="2" icon="candy_og" score="30" crushEffect="ingame_normalBlock_crush_og" drop="1" iconsmall="candy_og_small" UGCrender="4"/>
+		<block blockId="12" blockType="1" color="3" icon="candy_ye" score="30" crushEffect="ingame_normalBlock_crush_ye" drop="1" iconsmall="candy_ye_small" UGCrender="4"/>
+		<block blockId="13" blockType="1" color="4" icon="candy_gn" score="30" crushEffect="ingame_normalBlock_crush_gn" drop="1" iconsmall="candy_gn_small" UGCrender="4"/>
+		<block blockId="14" blockType="1" color="5" icon="candy_bu" score="30" crushEffect="ingame_normalBlock_crush_bu" drop="1" iconsmall="candy_bu_small" UGCrender="4"/>
+		<block blockId="15" blockType="1" color="6" icon="candy_vt" score="30" crushEffect="ingame_normalBlock_crush_vt" drop="1" iconsmall="candy_vt_small" UGCrender="4"/>
+	
+	<!-- 6色横条纹-->
+		<block blockId="16" blockType="2" color="1" icon="candy_rd_h" score="120" crushEffect="" iconsmall="candy_rd_h_small" UGCrender="4"/>
+		<block blockId="17" blockType="2" color="2" icon="candy_og_h" score="120" crushEffect="" iconsmall="candy_og_h_small" UGCrender="4"/>
+		<block blockId="18" blockType="2" color="3" icon="candy_ye_h" score="120" crushEffect="" iconsmall="candy_ye_h_small" UGCrender="4"/>
+		<block blockId="19" blockType="2" color="4" icon="candy_gn_h" score="120" crushEffect="" iconsmall="candy_gn_h_small" UGCrender="4"/>
+		<block blockId="20" blockType="2" color="5" icon="candy_bu_h" score="120" crushEffect="" iconsmall="candy_bu_h_small" UGCrender="4"/>
+		<block blockId="21" blockType="2" color="6" icon="candy_vt_h" score="120" crushEffect="" iconsmall="candy_vt_h_small" UGCrender="4"/>
+	<!-- 6色竖横纹-->
+		<block blockId="22" blockType="3" color="1" icon="candy_rd_v" score="120" crushEffect="" iconsmall="candy_rd_v_small" UGCrender="4"/>
+		<block blockId="23" blockType="3" color="2" icon="candy_og_v" score="120" crushEffect="" iconsmall="candy_og_v_small" UGCrender="4"/>
+		<block blockId="24" blockType="3" color="3" icon="candy_ye_v" score="120" crushEffect="" iconsmall="candy_ye_v_small" UGCrender="4"/>
+		<block blockId="25" blockType="3" color="4" icon="candy_gn_v" score="120" crushEffect="" iconsmall="candy_gn_v_small" UGCrender="4"/>
+		<block blockId="26" blockType="3" color="5" icon="candy_bu_v" score="120" crushEffect="" iconsmall="candy_bu_v_small" UGCrender="4"/>
+		<block blockId="27" blockType="3" color="6" icon="candy_vt_v" score="120" crushEffect="" iconsmall="candy_vt_v_small" UGCrender="4"/>
+	<!-- 6色包装-->
+		<block blockId="28" blockType="5" color="1" icon="candy_rd_w" score="180" crushEffect="ingame_normalBlock_crush_rd" iconsmall="candy_rd_w_small" UGCrender="4"/>
+		<block blockId="29" blockType="5" color="2" icon="candy_og_w" score="180" crushEffect="ingame_normalBlock_crush_og" iconsmall="candy_og_w_small" UGCrender="4"/>
+		<block blockId="30" blockType="5" color="3" icon="candy_ye_w" score="180" crushEffect="ingame_normalBlock_crush_ye" iconsmall="candy_ye_w_small" UGCrender="4"/>
+		<block blockId="31" blockType="5" color="4" icon="candy_gn_w" score="180" crushEffect="ingame_normalBlock_crush_gn" iconsmall="candy_gn_w_small" UGCrender="4"/>
+		<block blockId="32" blockType="5" color="5" icon="candy_bu_w" score="180" crushEffect="ingame_normalBlock_crush_bu" iconsmall="candy_bu_w_small" UGCrender="4"/>
+		<block blockId="33" blockType="5" color="6" icon="candy_vt_w" score="180" crushEffect="ingame_normalBlock_crush_vt" iconsmall="candy_vt_w_small" UGCrender="4"/>
+		<!-- 彩色块 -->	
+		<block blockId="34" blockType="6" icon="color" score="400" crushEffect="ingame_colorBlock_burst2" iconsmall="color_small" UGCrender="4"/>
+		<!-- 复制块 -->	
+		<block blockId="35" blockType="7" clone="0" icon="clone" score="400" crushEffect="ingame_cloneBlock_cloneLineBurst" iconsmall="clone_small" UGCrender="4"/>
+
+		<!-- 椰子轮 -->
+		<block blockId="51" blockType="9" icon="circle" score="1800" iconsmall="circle_small" UGCrender="4"/>
+
+		<!-- 奶油 -->
+		<block blockId="52" blockType="10" drag="0" life="1" sidewipe="1" clone="0" maxlife="6" icon="block1" score="50" crushEffect="" drop="1" iconsmall="block1_small"/>
+		<block blockId="53" blockType="10" drag="0" life="2" sidewipe="1" clone="0" maxlife="6" icon="block2" score="50" crushEffect="block_d_2" drop="1" iconsmall="block2_small" UGCrender ="3"/>
+		<block blockId="54" blockType="10" drag="0" life="3" sidewipe="1" clone="0" maxlife="6" icon="block3" score="50" crushEffect="block_d_3" drop="1" iconsmall="block3_small" UGCrender ="3"/>
+		<block blockId="55" blockType="10" drag="0" life="4" sidewipe="1" clone="0" maxlife="6" icon="block4" score="50" crushEffect="block_d_4" drop="1" iconsmall="block4_small" UGCrender ="3"/>
+		<block blockId="56" blockType="10" drag="0" life="5" sidewipe="1" clone="0" maxlife="6" icon="block5" score="50" crushEffect="block_d_5" drop="1" iconsmall="block5_small" UGCrender ="3"/>
+		<block blockId="57" blockType="10" drag="0" life="6" sidewipe="1" clone="0" maxlife="6" icon="block6" score="50" crushEffect="block_d_6" drop="1" iconsmall="block6_small" UGCrender ="3"/>
+
+		<!-- 圈圈饼 -->
+		<block blockId="60" blockType="21" life="1" maxlife="3" icon="block_brezel_1" sidewipe="1" score="100" drop="1" iconsmall="block_brezel_1_small" crushEffect="qqb02" UGCrender="4"/>
+		<block blockId="61" blockType="21" life="2" maxlife="3" icon="block_brezel_2" sidewipe="1" score="100" drop="1" iconsmall="block_brezel_2_small" crushEffect="qqb01" UGCrender="4"/>
+		<block blockId="62" blockType="21" life="3" maxlife="3" icon="block_brezel_3" sidewipe="1" score="100" drop="1" iconsmall="block_brezel_3_small" crushEffect="qqb03" UGCrender="4"/>
+		<!-- 果冻 -->
+		<block blockId="82" blockType="26" life="1" maxlife="2" icon="jelly1" score="500" drop="1" iconsmall="jelly1_small" UGCrender="4"/>
+		<block blockId="83" blockType="26" life="2" maxlife="2" icon="jelly2" score="500" drop="1" iconsmall="jelly2_small" UGCrender="4"/>
+
+		<!-- 运送块 -->
+		<block blockId="84" blockType="11" icon="transport_1" score="3000" drop="1" iconsmall="transport_1_small" UGCrender="4"/>
+		
+		<!-- 巧克力/华夫饼 -->
+		<block blockId="85" blockType="12" drag="0" life="1" sidewipe="2" clone="0" icon="block_waffle_1" score="100" drop="1" iconsmall="block_waffle_1_small" UGCrender ="3"/>
+
+		<!-- 冰块/包装纸/冰淇淋 -->
+		<block blockId="401" blockType="27" drag="0" sidewipe="1" life="1" maxlife="6" icon="wrapper1" score="150" iconsmall="wrapper1_small" UGCrender ="1"/>
+		<block blockId="402" blockType="27" drag="0" sidewipe="1" life="2" maxlife="6" icon="wrapper2" score="150" iconsmall="wrapper2_small" UGCrender ="1"/>
+		<block blockId="403" blockType="27" drag="0" sidewipe="1" life="3" maxlife="6" icon="wrapper3" score="150" iconsmall="wrapper3_small" UGCrender ="1"/>
+		<block blockId="404" blockType="27" drag="0" sidewipe="1" life="4" maxlife="6" icon="wrapper4" score="150" iconsmall="wrapper4_small" UGCrender ="2"/>
+		<block blockId="405" blockType="27" drag="0" sidewipe="1" life="5" maxlife="6" icon="wrapper5" score="150" iconsmall="wrapper5_small" UGCrender ="2"/>
+		<block blockId="406" blockType="27" drag="0" sidewipe="1" life="6" maxlife="6" icon="wrapper6" score="150" iconsmall="wrapper6_small" UGCrender ="2"/>
+		
+		<!-- 干果罐子 -->
+		<block blockId="88" blockType="16" icon="driedfruit_jar_3" drop="1" iconsmall="driedfruit_jar_3_small" ismodel="false" UGCrender="4"/>
+		
+		<!-- 特殊方块罐子 -->
+		<block blockId="89" blockType="29" icon="driedfruit_jar_4" drop="1" iconsmall="driedfruit_jar_4_small" ismodel="false" UGCrender="4"/>	<!-- 暂时与干果罐子资源相同 -->
+		
+		<!-- Pizza -->
+		<block blockId="90" blockType="13" color="0" drag="0" life="2" maxlife="2" sidewipe="1" icon="match_ugc_pizza" clone="0" drop="1" iconsmall="match_ugc_pizza_small" ismodel="false" UGCrender="4" sizeMultiple="2,2" scaleMode="4"/>
+		<block blockId="91" blockType="-11" color="0" drag="0" life="1" maxlife="1" sidewipe="1" icon="" clone="0" score="2000" drop="1" iconsmall="_small" ismodel="false" UGCrender="4"/>
+
+		<!-- 巧克力机器->华夫饼机器 -->		
+		<block blockId="95" blockType="24" color="0" drag="0" life="1" sidewipe="1" icon="wafflemachine" score="60" drop="1" iconsmall="wafflemachine_small" ismodel="false" UGCrender ="4"/>
+		
+		<!-- BOSS替代块 -->		
+		<block blockId="96" blockType="25" color="0" drag="0" life="1" sidewipe="1" icon="match_ugc_boss" score="20000" drop="1" iconsmall="match_ugc_boss_small" ismodel="false" UGCrender="4" sizeMultiple="2,2" scaleMode="4"/>
+		
+		<!-- 炸弹 -->		
+		<block blockId="100" blockType="17" color="1" icon="bomb_rd" score="2000" crushEffect="bomb_rd" iconsmall="bomb_rd_small" UGCrender="4"/>
+		<block blockId="101" blockType="17" color="2" icon="bomb_og" score="2000" crushEffect="bomb_og" iconsmall="bomb_og_small" UGCrender="4"/>
+		<block blockId="102" blockType="17" color="3" icon="bomb_ye" score="2000" crushEffect="bomb_ye" iconsmall="bomb_ye_small" UGCrender="4"/>
+		<block blockId="103" blockType="17" color="4" icon="bomb_gn" score="2000" crushEffect="bomb_gn" iconsmall="bomb_gn_small" UGCrender="4"/>
+		<block blockId="104" blockType="17" color="5" icon="bomb_bu" score="2000" crushEffect="bomb_bu" iconsmall="bomb_bu_small" UGCrender="4"/>
+		<block blockId="105" blockType="17" color="6" icon="bomb_vt" score="2000" crushEffect="bomb_vt" iconsmall="bomb_vt_small" UGCrender="4"/>
+
+		<!-- 小人 -->
+		<block blockId="110" blockType="15" color="1" icon="man_rd" score="1200" crushEffect="ingame_normalBlock_crush_rd" drop="1" iconsmall="man_rd_small" ismodel="false" UGCrender="4"/>
+		<block blockId="111" blockType="15" color="2" icon="man_og" score="1200" crushEffect="ingame_normalBlock_crush_og" drop="1" iconsmall="man_og_small" ismodel="false" UGCrender="4"/>
+		<block blockId="112" blockType="15" color="3" icon="man_ye" score="1200" crushEffect="ingame_normalBlock_crush_ye" drop="1" iconsmall="man_ye_small" ismodel="false" UGCrender="4"/>
+		<block blockId="113" blockType="15" color="4" icon="man_gn" score="1200" crushEffect="ingame_normalBlock_crush_gn" drop="1" iconsmall="man_gn_small" ismodel="false" UGCrender="4"/>
+		<block blockId="114" blockType="15" color="5" icon="man_bu" score="1200" crushEffect="ingame_normalBlock_crush_bu" drop="1" iconsmall="man_bu_small" ismodel="false" UGCrender="4"/>
+		<block blockId="115" blockType="15" color="6" icon="man_vt" score="1200" crushEffect="ingame_normalBlock_crush_vt" drop="1" iconsmall="man_vt_small" ismodel="false" UGCrender="4"/>
+		
+		<!--幽灵-->
+		<block blockId="116" blockType="14" color="0" icon="block_ghost_2" life="1" maxlife="2" sidewipe="1" score="700" iconsmall="block_ghost_2_small" UGCrender="4"/>
+		<block blockId="117" blockType="14" color="0" icon="block_ghost_1" life="2" maxlife="2" sidewipe="1" score="300" iconsmall="block_ghost_1_small" UGCrender="4"/>
+
+		<!-- 5步加步块 -->
+		<block blockId="120" blockType="22" color="1" icon="candy_rd" param="5" setpsIcon="setp_five" score="500" crushEffect="ingame_normalBlock_crush_rd" iconsmall="candy_rd_small" UGCrender="4"/>
+		<block blockId="121" blockType="22" color="2" icon="candy_og" param="5" setpsIcon="setp_five" score="500" crushEffect="ingame_normalBlock_crush_og" iconsmall="candy_og_small" UGCrender="4"/>
+		<block blockId="122" blockType="22" color="3" icon="candy_ye" param="5" setpsIcon="setp_five" score="500" crushEffect="ingame_normalBlock_crush_ye" iconsmall="candy_ye_small" UGCrender="4"/>
+		<block blockId="123" blockType="22" color="4" icon="candy_gn" param="5" setpsIcon="setp_five" score="500" crushEffect="ingame_normalBlock_crush_gn" iconsmall="candy_gn_small" UGCrender="4"/>
+		<block blockId="124" blockType="22" color="5" icon="candy_bu" param="5" setpsIcon="setp_five" score="500" crushEffect="ingame_normalBlock_crush_bu" iconsmall="candy_bu_small" UGCrender="4"/>
+		<block blockId="125" blockType="22" color="6" icon="candy_vt" param="5" setpsIcon="setp_five" score="500" crushEffect="ingame_normalBlock_crush_vt" iconsmall="candy_vt_small" UGCrender="4"/>
+
+		<!--问号蛋-->
+		<block blockId="130" blockType="23" color="1" icon="egg_rd" score="100" crushEffect="ingame_normalBlock_crush_rd" iconsmall="egg_rd_small" UGCrender="4"/>
+		<block blockId="131" blockType="23" color="2" icon="egg_og" score="100" crushEffect="ingame_normalBlock_crush_og" iconsmall="egg_og_small" UGCrender="4"/>
+		<block blockId="132" blockType="23" color="3" icon="egg_ye" score="100" crushEffect="ingame_normalBlock_crush_ye" iconsmall="egg_ye_small" UGCrender="4"/>
+		<block blockId="133" blockType="23" color="4" icon="egg_gn" score="100" crushEffect="ingame_normalBlock_crush_gn" iconsmall="egg_gn_small" UGCrender="4"/>
+		<block blockId="134" blockType="23" color="5" icon="egg_bu" score="100" crushEffect="ingame_normalBlock_crush_bu" iconsmall="egg_bu_small" UGCrender="4"/>
+		<block blockId="135" blockType="23" color="6" icon="egg_vt" score="100" crushEffect="ingame_normalBlock_crush_vt" iconsmall="egg_vt_small" UGCrender="4"/>
+		
+		<!--布丁块-->
+		<block blockId="140" blockType="35" drag="0" life="1" sidewipe="1" clone="0" maxlife="1" icon="block_pudding" score="50" crushEffect="" drop="1" iconsmall="block_pudding_small" UGCrender ="4"/>
+		<!--棋盘锁-->
+		<block blockId="150" blockType="37" color="0" drag="0" life="1" sidewipe="1" icon="" score="0" UGCrender="4"/>
+		<!-- 双色蝴蝶 新 -->
+		<block blockId="200" blockType="8" color="012" icon="butterfly_rd_og_hc" score="530" iconsmall="butterfly_rd_og_hc_small" UGCrender="4"/>
+		<block blockId="201" blockType="8" color="112" icon="butterfly_rd_og_vc" score="530" iconsmall="butterfly_rd_og_vc_small" UGCrender="4"/>
+		<block blockId="202" blockType="8" color="013" icon="butterfly_rd_ye_hc" score="530" iconsmall="butterfly_rd_ye_hc_small" UGCrender="4"/>
+		<block blockId="203" blockType="8" color="113" icon="butterfly_rd_ye_vc" score="530" iconsmall="butterfly_rd_ye_vc_small" UGCrender="4"/>
+		<block blockId="204" blockType="8" color="014" icon="butterfly_rd_gn_hc" score="530" iconsmall="butterfly_rd_gn_hc_small" UGCrender="4"/>
+		<block blockId="205" blockType="8" color="114" icon="butterfly_rd_gn_vc" score="530" iconsmall="butterfly_rd_gn_vc_small" UGCrender="4"/>
+		<block blockId="206" blockType="8" color="015" icon="butterfly_rd_bu_hc" score="530" iconsmall="butterfly_rd_bu_hc_small" UGCrender="4"/>
+		<block blockId="207" blockType="8" color="115" icon="butterfly_rd_bu_vc" score="530" iconsmall="butterfly_rd_bu_vc_small" UGCrender="4"/>
+		<block blockId="208" blockType="8" color="016" icon="butterfly_rd_vt_hc" score="530" iconsmall="butterfly_rd_vt_hc_small" UGCrender="4"/>
+		<block blockId="209" blockType="8" color="116" icon="butterfly_rd_vt_vc" score="530" iconsmall="butterfly_rd_vt_vc_small" UGCrender="4"/>
+		<block blockId="210" blockType="8" color="021" icon="butterfly_og_rd_hc" score="530" iconsmall="butterfly_og_rd_hc_small" UGCrender="4"/>
+		<block blockId="211" blockType="8" color="121" icon="butterfly_og_rd_vc" score="530" iconsmall="butterfly_og_rd_vc_small" UGCrender="4"/>
+		<block blockId="212" blockType="8" color="023" icon="butterfly_og_ye_hc" score="530" iconsmall="butterfly_og_ye_hc_small" UGCrender="4"/>
+		<block blockId="213" blockType="8" color="123" icon="butterfly_og_ye_vc" score="530" iconsmall="butterfly_og_ye_vc_small" UGCrender="4"/>
+		<block blockId="214" blockType="8" color="024" icon="butterfly_og_gn_hc" score="530" iconsmall="butterfly_og_gn_hc_small" UGCrender="4"/>
+		<block blockId="215" blockType="8" color="124" icon="butterfly_og_gn_vc" score="530" iconsmall="butterfly_og_gn_vc_small" UGCrender="4"/>
+		<block blockId="216" blockType="8" color="025" icon="butterfly_og_bu_hc" score="530" iconsmall="butterfly_og_bu_hc_small" UGCrender="4"/>
+		<block blockId="217" blockType="8" color="125" icon="butterfly_og_bu_vc" score="530" iconsmall="butterfly_og_bu_vc_small" UGCrender="4"/>
+		<block blockId="218" blockType="8" color="026" icon="butterfly_og_vt_hc" score="530" iconsmall="butterfly_og_vt_hc_small" UGCrender="4"/>
+		<block blockId="219" blockType="8" color="126" icon="butterfly_og_vt_vc" score="530" iconsmall="butterfly_og_vt_vc_small" UGCrender="4"/>
+		<block blockId="220" blockType="8" color="031" icon="butterfly_ye_rd_hc" score="530" iconsmall="butterfly_ye_rd_hc_small" UGCrender="4"/>
+		<block blockId="221" blockType="8" color="131" icon="butterfly_ye_rd_vc" score="530" iconsmall="butterfly_ye_rd_vc_small" UGCrender="4"/>
+		<block blockId="222" blockType="8" color="032" icon="butterfly_ye_og_hc" score="530" iconsmall="butterfly_ye_og_hc_small" UGCrender="4"/>
+		<block blockId="223" blockType="8" color="132" icon="butterfly_ye_og_vc" score="530" iconsmall="butterfly_ye_og_vc_small" UGCrender="4"/>
+		<block blockId="224" blockType="8" color="034" icon="butterfly_ye_gn_hc" score="530" iconsmall="butterfly_ye_gn_hc_small" UGCrender="4"/>
+		<block blockId="225" blockType="8" color="134" icon="butterfly_ye_gn_vc" score="530" iconsmall="butterfly_ye_gn_vc_small" UGCrender="4"/>
+		<block blockId="226" blockType="8" color="035" icon="butterfly_ye_bu_hc" score="530" iconsmall="butterfly_ye_bu_hc_small" UGCrender="4"/>
+		<block blockId="227" blockType="8" color="135" icon="butterfly_ye_bu_vc" score="530" iconsmall="butterfly_ye_bu_vc_small" UGCrender="4"/>
+		<block blockId="228" blockType="8" color="036" icon="butterfly_ye_vt_hc" score="530" iconsmall="butterfly_ye_vt_hc_small" UGCrender="4"/>
+		<block blockId="229" blockType="8" color="136" icon="butterfly_ye_vt_vc" score="530" iconsmall="butterfly_ye_vt_vc_small" UGCrender="4"/>
+		<block blockId="230" blockType="8" color="041" icon="butterfly_gn_rd_hc" score="530" iconsmall="butterfly_gn_rd_hc_small" UGCrender="4"/>
+		<block blockId="231" blockType="8" color="141" icon="butterfly_gn_rd_vc" score="530" iconsmall="butterfly_gn_rd_vc_small" UGCrender="4"/>
+		<block blockId="232" blockType="8" color="042" icon="butterfly_gn_og_hc" score="530" iconsmall="butterfly_gn_og_hc_small" UGCrender="4"/>
+		<block blockId="233" blockType="8" color="142" icon="butterfly_gn_og_vc" score="530" iconsmall="butterfly_gn_og_vc_small" UGCrender="4"/>
+		<block blockId="234" blockType="8" color="043" icon="butterfly_gn_ye_hc" score="530" iconsmall="butterfly_gn_ye_hc_small" UGCrender="4"/>
+		<block blockId="235" blockType="8" color="143" icon="butterfly_gn_ye_vc" score="530" iconsmall="butterfly_gn_ye_vc_small" UGCrender="4"/>
+		<block blockId="236" blockType="8" color="045" icon="butterfly_gn_bu_hc" score="530" iconsmall="butterfly_gn_bu_hc_small" UGCrender="4"/>
+		<block blockId="237" blockType="8" color="145" icon="butterfly_gn_bu_vc" score="530" iconsmall="butterfly_gn_bu_vc_small" UGCrender="4"/>
+		<block blockId="238" blockType="8" color="046" icon="butterfly_gn_vt_hc" score="530" iconsmall="butterfly_gn_vt_hc_small" UGCrender="4"/>
+		<block blockId="239" blockType="8" color="146" icon="butterfly_gn_vt_vc" score="530" iconsmall="butterfly_gn_vt_vc_small" UGCrender="4"/>
+		<block blockId="240" blockType="8" color="051" icon="butterfly_bu_rd_hc" score="530" iconsmall="butterfly_bu_rd_hc_small" UGCrender="4"/>
+		<block blockId="241" blockType="8" color="151" icon="butterfly_bu_rd_vc" score="530" iconsmall="butterfly_bu_rd_vc_small" UGCrender="4"/>
+		<block blockId="242" blockType="8" color="052" icon="butterfly_bu_og_hc" score="530" iconsmall="butterfly_bu_og_hc_small" UGCrender="4"/>
+		<block blockId="243" blockType="8" color="152" icon="butterfly_bu_og_vc" score="530" iconsmall="butterfly_bu_og_vc_small" UGCrender="4"/>
+		<block blockId="244" blockType="8" color="053" icon="butterfly_bu_ye_hc" score="530" iconsmall="butterfly_bu_ye_hc_small" UGCrender="4"/>
+		<block blockId="245" blockType="8" color="153" icon="butterfly_bu_ye_vc" score="530" iconsmall="butterfly_bu_ye_vc_small" UGCrender="4"/>
+		<block blockId="246" blockType="8" color="054" icon="butterfly_bu_gn_hc" score="530" iconsmall="butterfly_bu_gn_hc_small" UGCrender="4"/>
+		<block blockId="247" blockType="8" color="154" icon="butterfly_bu_gn_vc" score="530" iconsmall="butterfly_bu_gn_vc_small" UGCrender="4"/>
+		<block blockId="248" blockType="8" color="056" icon="butterfly_bu_vt_hc" score="530" iconsmall="butterfly_bu_vt_hc_small" UGCrender="4"/>
+		<block blockId="249" blockType="8" color="156" icon="butterfly_bu_vt_vc" score="530" iconsmall="butterfly_bu_vt_vc_small" UGCrender="4"/>
+		<block blockId="250" blockType="8" color="061" icon="butterfly_vt_rd_hc" score="530" iconsmall="butterfly_vt_rd_hc_small" UGCrender="4"/>
+		<block blockId="251" blockType="8" color="161" icon="butterfly_vt_rd_vc" score="530" iconsmall="butterfly_vt_rd_vc_small" UGCrender="4"/>
+		<block blockId="252" blockType="8" color="062" icon="butterfly_vt_og_hc" score="530" iconsmall="butterfly_vt_og_hc_small" UGCrender="4"/>
+		<block blockId="253" blockType="8" color="162" icon="butterfly_vt_og_vc" score="530" iconsmall="butterfly_vt_og_vc_small" UGCrender="4"/>
+		<block blockId="254" blockType="8" color="063" icon="butterfly_vt_ye_hc" score="530" iconsmall="butterfly_vt_ye_hc_small" UGCrender="4"/>
+		<block blockId="255" blockType="8" color="163" icon="butterfly_vt_ye_vc" score="530" iconsmall="butterfly_vt_ye_vc_small" UGCrender="4"/>
+		<block blockId="256" blockType="8" color="064" icon="butterfly_vt_gn_hc" score="530" iconsmall="butterfly_vt_gn_hc_small" UGCrender="4"/>
+		<block blockId="257" blockType="8" color="164" icon="butterfly_vt_gn_vc" score="530" iconsmall="butterfly_vt_gn_vc_small" UGCrender="4"/>
+		<block blockId="258" blockType="8" color="065" icon="butterfly_vt_bu_hc" score="530" iconsmall="butterfly_vt_bu_hc_small" UGCrender="4"/>
+		<block blockId="259" blockType="8" color="165" icon="butterfly_vt_bu_vc" score="530" iconsmall="butterfly_vt_bu_vc_small" UGCrender="4"/>
+		<!-- 临时单色蝴蝶 -->
+		<block blockId="260" blockType="30" color="1" icon="butterfly_rd" score="530" UGCrender="4"/>
+		<block blockId="261" blockType="30" color="2" icon="butterfly_og" score="530" UGCrender="4"/>
+		<block blockId="262" blockType="30" color="3" icon="butterfly_ye" score="530" UGCrender="4"/>
+		<block blockId="263" blockType="30" color="4" icon="butterfly_gn" score="530" UGCrender="4"/>
+		<block blockId="264" blockType="30" color="5" icon="butterfly_bu" score="530" UGCrender="4"/>
+		<block blockId="265" blockType="30" color="6" icon="butterfly_vt" score="530" UGCrender="4"/>
+		<!-- 临时单色横条纹蝴蝶 -->
+		<block blockId="270" blockType="31" color="1" icon="butterfly_rd_h" score="0" UGCrender="4"/>
+		<block blockId="271" blockType="31" color="2" icon="butterfly_og_h" score="0" UGCrender="4"/>
+		<block blockId="272" blockType="31" color="3" icon="butterfly_ye_h" score="0" UGCrender="4"/>
+		<block blockId="273" blockType="31" color="4" icon="butterfly_gn_h" score="0" UGCrender="4"/>
+		<block blockId="274" blockType="31" color="5" icon="butterfly_bu_h" score="0" UGCrender="4"/>
+		<block blockId="275" blockType="31" color="6" icon="butterfly_vt_h" score="0" UGCrender="4"/>
+		<!-- 临时单色竖条纹蝴蝶 -->
+		<block blockId="280" blockType="32" color="1" icon="butterfly_rd_v" score="0" UGCrender="4"/>
+		<block blockId="281" blockType="32" color="2" icon="butterfly_og_v" score="0" UGCrender="4"/>
+		<block blockId="282" blockType="32" color="3" icon="butterfly_ye_v" score="0" UGCrender="4"/>
+		<block blockId="283" blockType="32" color="4" icon="butterfly_gn_v" score="0" UGCrender="4"/>
+		<block blockId="284" blockType="32" color="5" icon="butterfly_bu_v" score="0" UGCrender="4"/>
+		<block blockId="285" blockType="32" color="6" icon="butterfly_vt_v" score="0" UGCrender="4"/>
+		<!-- 临时单色包装蝴蝶 -->
+		<block blockId="290" blockType="33" color="1" icon="butterfly_rd_w" score="0" UGCrender="4"/>
+		<block blockId="291" blockType="33" color="2" icon="butterfly_og_w" score="0" UGCrender="4"/>
+		<block blockId="292" blockType="33" color="3" icon="butterfly_ye_w" score="0" UGCrender="4"/>
+		<block blockId="293" blockType="33" color="4" icon="butterfly_gn_w" score="0" UGCrender="4"/>
+		<block blockId="294" blockType="33" color="5" icon="butterfly_bu_w" score="0" UGCrender="4"/>
+		<block blockId="295" blockType="33" color="6" icon="butterfly_vt_w" score="0" UGCrender="4"/>
+        
+        <!-- 单色蝴蝶 -->
+        <block blockId="300" blockType="36" color="1" icon="butterfly_rd" score="530" iconsmall="butterfly_rd_small" UGCrender="4"/>
+		<block blockId="301" blockType="36" color="2" icon="butterfly_og" score="530" iconsmall="butterfly_og_small" UGCrender="4"/>
+		<block blockId="302" blockType="36" color="3" icon="butterfly_ye" score="530" iconsmall="butterfly_ye_small" UGCrender="4"/>
+		<block blockId="303" blockType="36" color="4" icon="butterfly_gn" score="530" iconsmall="butterfly_gn_small" UGCrender="4"/>
+		<block blockId="304" blockType="36" color="5" icon="butterfly_bu" score="530" iconsmall="butterfly_bu_small" UGCrender="4"/>
+		<block blockId="305" blockType="36" color="6" icon="butterfly_vt" score="530" iconsmall="butterfly_vt_small" UGCrender="4"/>
+		
+		<!--UGC工具栏中使用中资源-->
+		<block blockId="1000" blockType="99" param="2" icon="lahuabiao" drop="1" UGCrender="4"/>								<!-- 变为条纹 -->
+		<block blockId="1001" blockType="99" param="5" icon="daizi" drop="1" ismodel="false" UGCrender="4"/>					<!-- 变为包装 -->
+		<block blockId="1002" blockType="99" param="36" icon="yz_hudie" drop="1" UGCrender="4"/>								<!-- 变为单色蝴蝶 -->
+		<block blockId="1003" blockType="99" param="15" icon="yz_xiaoren" drop="1" UGCrender="4"/>							<!-- 变为小人 -->
+		<block blockId="1004" blockType="99" param="17" icon="yz_bomb" drop="1" ismodel="false" UGCrender="4"/>				<!-- 变为炸弹 -->
+		<block blockId="1005" blockType="99" param="15" icon="manBlock_02" drop="1" UGCrender="1"/>							<!-- 变为小人出生点 -->
+		
+		
+		<!-- 运送点 -->
+		<block blockId="1100" blockType="99" param="1" icon="block_digger" drop="1" iconsmall="block_digger_small" ismodel="false" UGCrender="1"/>
+		<block blockId="1101" blockType="99" param="2" icon="block_digger" drop="1" iconsmall="block_digger_small" ismodel="false" UGCrender="1"/>
+		<!-- 掉落点 -->
+		<block blockId="1102" blockType="99" param="3" icon="diaoluo" drop="1" iconsmall="diaoluo_small" ismodel="false" UGCrender="4"/>
+		<!-- 移动棋盘 -->
+		<block blockId="1200" blockType="99" param="0" icon="piece_move_bg" drop="1" iconsmall="piece_move_bg_small" ismodel="false" UGCrender="4"/>
+	</blocks>
+</data>

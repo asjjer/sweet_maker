@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- 定义各种通关类型 -->
+<data>
+<!--通关条件定义
+	orderType=0，消除指定ID的方块。param表示blockId。
+	orderType=1，消除特定类型方块。param表示blockType。
+	orderType=2，方块组合。param表示两种组合的blockType，参数用逗号隔开。
+
+-->
+	<!-- orderId目标id，orderType目标类型，param目标类型参数，icon目标对应图标 iconEdit:编辑器里面对应的图标  needCalCount  统计目标个数-->
+	<order orderId="1" orderType="0" param="10" iconSmall="order_rd_s" iconBig="order_rd_l" iconEdit="candy_rd" victoryscore="0"/>
+	<order orderId="2" orderType="0" param="11" iconSmall="order_og_s" iconBig="order_og_l" iconEdit="candy_og" victoryscore="0"/>
+	<order orderId="3" orderType="0" param="12" iconSmall="order_ye_s" iconBig="order_ye_l" iconEdit="candy_ye" victoryscore="0"/>
+	<order orderId="4" orderType="0" param="13" iconSmall="order_gn_s" iconBig="order_gn_l" iconEdit="candy_gn" victoryscore="0"/>
+	<order orderId="5" orderType="0" param="14" iconSmall="order_bu_s" iconBig="order_bu_l" iconEdit="candy_bu" victoryscore="0"/>
+	<order orderId="6" orderType="0" param="15" iconSmall="order_vt_s" iconBig="order_vt_l" iconEdit="candy_vt" victoryscore="0"/>
+	<order orderId="7" orderType="0" param="96" iconSmall="order_screamboss_s" iconBig="order_screamboss_l" iconEdit="order_screamboss_001" isModal="0" victoryscore="0"/>
+
+
+	<order orderId="10" orderType="1" param="26" iconSmall="order_jelly_s" iconBig="order_jelly_l" iconEdit="jelly2" victoryscore="0" needCalCount="1"/>
+	<order orderId="11" orderType="1" param="11" iconSmall="order_nuts_s" iconBig="order_nuts_l" iconEdit="transport_1" victoryscore="0"/>
+	<order orderId="12" orderType="1" param="10" iconSmall="order_cream_s" iconBig="order_cream_l" iconEdit="block6" needCalCount="1"/>
+	<order orderId="13" orderType="1" param="12" iconSmall="order_waffle_s" iconBig="order_waffle_l" iconEdit="block_waffle_1" needCalCount="1"/>
+	<order orderId="14" orderType="1" param="4" iconSmall="order_line_s" iconBig="order_line_l" iconEdit="order_line_001" isModal="0" victoryscore="0"/>
+	<order orderId="15" orderType="1" param="5" iconSmall="order_wrap_s" iconBig="order_wrap_l" iconEdit="order_wrap_001" isModal="0" victoryscore="0"/>
+	<order orderId="16" orderType="1" param="6" iconSmall="order_color_s" iconBig="order_color_l" iconEdit="color" victoryscore="0"/>
+	<order orderId="17" orderType="1" param="7" iconSmall="order_clone_s" iconBig="order_clone_l" iconEdit="clone" victoryscore="0"/>
+	<order orderId="18" orderType="1" param="8,36,30" iconSmall="order_butterfly_s" iconBig="order_butterfly_l" iconEdit="order_butterfly_001" isModal="0" victoryscore="0"/>
+	<order orderId="19" orderType="1" param="15" iconSmall="order_man_s" iconBig="order_man_l" iconEdit="manBlock" victoryscore="0"/>
+	<order orderId="21" orderType="1" param="35" iconSmall="order_pudding_s" iconBig="order_pudding_l" iconEdit="block_pudding" victoryscore="0" needCalCount="1"/>
+	<order orderId="22" orderType="1" param="23" iconSmall="order_egg_s" iconBig="order_egg_l" iconEdit="order_egg_001" isModal="0" victoryscore="0"/>
+	<order orderId="23" orderType="1" param="14" iconSmall="order_ghost_s" iconBig="order_ghost_l" iconEdit="block_ghost_1" victoryscore="0"/>
+	<order orderId="24" orderType="1" param="21" iconSmall="order_brezel_s" iconBig="order_brezel_l" iconEdit="block_brezel_1" victoryscore="0" needCalCount="1"/>
+	<order orderId="25" orderType="1" param="17" iconSmall="order_crushboom_s" iconBig="order_crushboom_l" iconEdit="bomb" victoryscore="0"/>
+	<order orderId="25" orderType="1" param="17" iconSmall="order_crushboom_s" iconBig="order_crushboom_l" iconEdit="bomb" victoryscore="0"/>
+
+	<order orderId="101" orderType="2" param="4,5" iconSmall="order_linewrap_s" iconBig="order_linewrap_l" iconEdit="order_linewrap_001" isModal="0" victoryscore="0"/>
+	<order orderId="102" orderType="2" param="4,6" iconSmall="order_colorline_s" iconBig="order_colorline_l" iconEdit="order_colorline_001" isModal="0" victoryscore="0"/>
+	<order orderId="103" orderType="2" param="5,5" iconSmall="order_doublewrap_s" iconBig="order_doublewrap_l" iconEdit="order_doublewrap_001" isModal="0" victoryscore="0"/>
+	<order orderId="104" orderType="2" param="5,6" iconSmall="order_colorwrap_s" iconBig="order_colorwrap_l" iconEdit="order_colorwrap_001" isModal="0" victoryscore="0"/>
+	<order orderId="105" orderType="2" param="6,6" iconSmall="order_doublecolor_s" iconBig="order_doublecolor_l" iconEdit="order_doublecolor_001" isModal="0" victoryscore="0"/>
+	<order orderId="106" orderType="2" param="7,7" iconSmall="order_doubleclone_s" iconBig="order_doubleclone_l" iconEdit="order_doubleclone_001" isModal="0" victoryscore="0"/>
+	<order orderId="107" orderType="2" param="6,8" iconSmall="order_colorbufferfly_s" iconBig="order_colorbufferfly_l" iconEdit="order_colorbufferfly_001" isModal="0" victoryscore="0"/>
+	<order orderId="108" orderType="2" param="6,7" iconSmall="order_colorclone_s" iconBig="order_colorclone_l" iconEdit="order_colorclone_001" isModal="0" victoryscore="0"/>
+</data>
+

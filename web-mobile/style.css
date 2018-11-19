@@ -1,0 +1,32 @@
+﻿* {margin: 0;padding: 0;font-family:"微软雅黑";}
+html{ position:relative;}
+.clear {clear: both}
+a{ color:#333;text-decoration:none;}
+img{border:none;height:auto;display:block;}
+li,ul,ol{ list-style:none }
+b a,h2 a{color:#333;text-decoration:none;}
+a:focus,input:focus{outline:none;}
+a,*,input{ -webkit-tap-highlight-color:rgba(255,0,0,0);-webkit-tap-highlight-color: none;-webkit-appearance:none;outline:none;}
+a:active,input {star:expression_r(this.onFocus=this.blur());-webkit-tap-highlight-color:rgba(0,0,0,0);}
+input {border:0;background:none;-webkit-appearance:none;/*去除input默认样式*/border-radius:0;margin:0;padding:0;}
+
+html,body{font-size:100px;}
+
+body{width:100vw;height:100vh;overflow:hidden;}
+
+.bdsharebuttonbox {width:100%; height: 2.56rem; background:url(shreBg.png) no-repeat center; bottom: 0; position: absolute; margin: auto;border-bottom:.03rem solid #B89016;}
+.bdsharebuttonbox a {width:.96rem;line-height:.5rem;text-align:center;font-size:.15rem;color:#333;margin:0 .23rem;background:none;height:1.46rem;text-indent:0;padding-top:.98rem;}
+.bdsharebuttonbox a.bds_twi {background:url(Twitter.png) no-repeat left top;background-size:100%; }
+.bdsharebuttonbox a.bds_weixin {background:url(wc.png) no-repeat left top;background-size:100%; }
+.bdsharebuttonbox a.bds_fbook {background:url(facebook.png) no-repeat left top;background-size:100%; }
+.bdsharebuttonbox a.btn {background:url(Copy-the-URL.png) no-repeat left top;background-size:100%; }
+.bdsharebuttonbox a.bds_more {background:url(more.png) no-repeat left top;background-size:100%; }
+.share_tit {font-size:.27rem;color:#940E01;text-align:center;height:.64rem;line-height:.64rem;background:url(xian.png) no-repeat bottom center;background-size:100% .02rem;width:80%;margin:0 10% .28rem;}
+
+
+
+@media screen and (min-width: 1050px) {
+.bdsharebuttonbox {width:664px;height: 220px;left:50%; margin-left:-332px;}
+.bdsharebuttonbox a {width:65px;line-height:50px;text-align:center;font-size:16px;color:#333;margin:0 20px;background:none;height:115px;text-indent:0;padding-top:.67rem;}
+.share_tit {font-size:27px;color:#940E01;text-align:center;height:64px;line-height:64px;background:url(xian.png) no-repeat bottom center;background-size:100% 2px;width:80%;margin:0 10% 28px;}
+}

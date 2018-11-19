@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>Sweet Maker</title>
+
+    <!--http://www.html5rocks.com/en/mobile/mobifying/-->
+    <meta name="viewport"
+        content="width=device-width,user-scalable=no,initial-scale=1, minimum-scale=1,maximum-scale=1" />
+
+    <!--https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- force webkit on 360 -->
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <!-- force edge on IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- force full screen on some browser -->
+    <meta name="full-screen" content="yes" />
+    <meta name="x5-fullscreen" content="true" />
+    <meta name="360-fullscreen" content="true" />
+
+    <!-- force screen orientation on some browser -->
+    <meta name="screen-orientation" content="portrait" />
+    <meta name="x5-orientation" content="portrait">
+
+    <!--fix fireball/issues/3568 -->
+    <!--<meta name="browsermode" content="application">-->
+    <meta name="x5-page-mode" content="app">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <link rel="stylesheet" type="text/css" href="style-mobile.css" />
+    <script src="jquery.js"></script>
+    <script src="clipboard.min.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if (clientWidth >= 750) {
+                        docEl.style.fontSize = '100px';
+                    } else {
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+    <div style="overflow: hidden; width: 1px; position: absolute; top: -100vh; left: 0;">
+        <span id="gameURL"></span>
+    </div>
+    <canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="0"></canvas>
+    <div id="splash" style="display: block;">
+        <img id="Img1" src="1.png" style="opacity: 0;">
+        <div id="progress" class="progress-bar stripes">
+            <div id="pro" style="width: 0%;">
+            </div>
+            <div id="pro_l">0%</div>
+        </div>
+    </div>
+    <div id="bdsharebuttonbox" style="display: none;" class="bdsharebuttonbox" data-tag="share_1">
+        <h2 class="share_tit">Share invitation</h2>
+        <a id="twi" class="bds_twi" data-cmd="twi">Twitter</a>
+        <a class="bds_weixin" data-cmd="weixin">WeChat</a>
+        <a class="bds_fbook" data-cmd="fbook">Facebook</a>
+        <a class="btn" data-clipboard-action="copy" data-clipboard-target="#gameURL" id="copy_btn">Copy</a>
+        <a class="bds_more" data-cmd="more">More</a>
+    </div>
+    <script>
+        var img1 = (document.body.clientWidth / 2) / document.getElementById('Img1').width;
+        var img2 = document.getElementById('Img1').height * img1;
+        var sp = document.getElementById('splash');
+        var h = (document.body.clientHeight / document.body.clientWidth) / (1485 / 1050) * 100;
+        sp.style.backgroundSize = h + "%";
+
+        var pro = document.getElementById('progress');
+        var pro_aa = document.getElementById('pro');
+        var scale = 50 / (document.body.clientWidth / 375);
+        scale = scale > 50 ? 50 : scale;
+        var left = (100 - scale) / 2
+        pro.style.width = scale + "%";
+        pro.style.left = left + "%";
+        window.shareURL = "http://game.h5gf.cn/sweet_maker/index.html";
+        document.getElementById("gameURL").innerHTML = window.location.href;
+        window._bd_share_config = {
+            common: {
+                bdText: '我在玩糖果大师,还可以自定义关卡哦!',
+                bdDesc: '',
+                bdUrl: window.location.href,
+                bdPic: 'http://h5gf.com/sweet_maker/view/share.jpg'
+            },
+            share: [{
+                "bdSize": 32
+            }],
+            image: [{
+                viewType: 'list',
+                viewPos: 'top',
+                viewColor: 'black',
+                viewSize: '32',
+                viewList: ['twi', 'weixin', '', 'fbook']
+            }],
+            selectShare: [{
+                "bdselectMiniList": ['twi', 'weixin', '', 'fbook']
+            }]
+        }
+        with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion=' + ~(-new Date() / 36e5)];
+        setTimeout(function () {
+            downLoadCss("style.css");
+        }, 1000);
+        function downLoadCss(url) {
+            var elem = document.createElement("link");
+            elem.rel = "stylesheet";
+            elem.type = "text/css";
+            elem.href = url;
+            document.body.appendChild(elem);
+        }
+        $(document).ready(function () {
+            var clipboard = new Clipboard('#copy_btn');
+            clipboard.on('success', function (e) {
+                alert("复制成功", 1500);
+                e.clearSelection();
+                console.log(e.clearSelection);
+            });
+        });
+    </script>
+    <script src="src/settings.js" charset="utf-8"></script>
+
+    <script src="main.js" charset="utf-8"></script>
+</body>
+</html>
